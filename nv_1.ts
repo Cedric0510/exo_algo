@@ -51,12 +51,9 @@ function is_perfect(n:number):boolean{
     for(let i=0; i<n; i++){
         if(n%i==0){
             res = res + (i)
-
-        }if(n==res){
-            return true
-        }
+        }       
     }
-return false
+    return n === res
 }
 
-console.log(is_perfect(28))
+console.log(is_perfect(7))
