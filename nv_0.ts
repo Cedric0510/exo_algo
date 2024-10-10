@@ -11,7 +11,7 @@ function year(year: number):boolean{
     return false
 }
 
-// console.log(year(1982))
+console.log(year(1982))
 
 
 //(I) Écrire une fonction delta qui prend trois coefficients a, b et c et qui calcul le coefficient delta
@@ -23,7 +23,7 @@ coef = b**2 - 4*a*c
 return coef    
 };
 
-// console.log(delta(199,603,123))
+console.log(delta(199,603,123))
 
 //(J) Écrire une fonction root qui prend trois coefficients a, b et c et qui, en utilisant la fonction
 // delta détermine s’il existe une racine au polynôme associé.
@@ -52,7 +52,6 @@ let coef:number = 0
      return array
 
   } else{
-            console.log(coef)
             let res: number = 0
             res = (-b / 2*a)
             array.push (res)
