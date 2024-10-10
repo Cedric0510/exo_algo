@@ -1,7 +1,7 @@
 // (H) Écrire une fonction is_leap qui prend en entrée un entier year et qui renvoie true s’il s’agit
 // d’une année bissextile, false sinon.
 
-function Year(year: number){
+function year(year: number):boolean{
     if (year%4 == 0){
         if (year%100 == 0){
         return year%400 == 0
@@ -11,19 +11,19 @@ function Year(year: number){
     return false
 }
 
-console.log(Year(1982))
+// console.log(year(1982))
 
 
 //(I) Écrire une fonction delta qui prend trois coefficients a, b et c et qui calcul le coefficient delta
 // du polynôme ax²+bx+c tel que delta = b² - 4ac
 
-function delta(a:number,b:number,c:number){
+function delta(a:number,b:number,c:number):number{
 let coef:number = 0
 coef = b**2 - 4*a*c
 return coef    
 };
 
-console.log(delta(199,603,123))
+// console.log(delta(199,603,123))
 
 //(J) Écrire une fonction root qui prend trois coefficients a, b et c et qui, en utilisant la fonction
 // delta détermine s’il existe une racine au polynôme associé.
@@ -34,10 +34,11 @@ console.log(delta(199,603,123))
 // ▪ -b + sqrt(delta) / 2a
 
 
-function root (a:number,b:number,c:number){
+function root (a:number,b:number,c:number):number[]{
+const deltafunc= delta(a,b,c);
 let array: number[] = [];
 let coef:number = 0
-coef = b**2 - 4*a*c 
+    deltafunc
     if (coef < 0){
     return array
 
