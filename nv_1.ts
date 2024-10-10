@@ -56,4 +56,5 @@ function is_perfect(n:number):boolean{
     return n === res
 }
 
-console.log(is_perfect(7))
+console.log(is_perfect(6))
+
