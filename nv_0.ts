@@ -37,24 +37,26 @@ console.log(delta(199,603,123))
 function root (a:number,b:number,c:number){
 let array: number[] = [];
 let coef:number = 0
-coef = b**2 - 4*a*c  
+coef = b**2 - 4*a*c 
     if (coef < 0){
     return array
-      }
-      else if(coef = 0){
-        let res: number = 0
-            res = (-b / 2*a)
-    array.push (res)
-    return array
-        }
-        else if (coef>0){
+
+      }else if (coef>0){
+            console.log(coef)
             let bigres:number= 0
             let bigres2:number = 0
             bigres = -b - Math.sqrt(coef) / 2*a 
             bigres2 = -b + Math.sqrt(coef) / 2*a
      array.push (bigres, bigres2);
      return array
-  }
+
+  } else{
+            console.log(coef)
+            let res: number = 0
+            res = (-b / 2*a)
+            array.push (res)
+    return array
+        }
 };
 
 console.log(root(199,603,123));
