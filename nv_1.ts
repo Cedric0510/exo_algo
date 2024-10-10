@@ -45,3 +45,18 @@ console.log(pgcd(36,60))
 // est égale au nombre en question. Par exemple, 6 est un nombre parfait parce que la somme
 // de ses diviseurs 1+2+3 est égale à 6. De même, 28 est parfait puisque 1+2+4+7+14=28.
 // Écrire une fonction is_perfect qui prend un entier n et renvoie true s’il est parfait, false sinon.
+
+function is_perfect(n:number):boolean{
+    let res = 0
+    for(let i=0; i<n; i++){
+        if(n%i==0){
+            res = res + (i)
+
+        }if(n==res){
+            return true
+        }
+    }
+return false
+}
+
+console.log(is_perfect(28))
