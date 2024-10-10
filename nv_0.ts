@@ -39,7 +39,7 @@ let array: number[] = [];
 let coef:number = 0
 coef = b**2 - 4*a*c  
     if (coef < 0){
-    console.log(array)
+    return array
       }
       else if(coef = 0){
         let res: number = 0
@@ -49,8 +49,11 @@ coef = b**2 - 4*a*c
         }
         else if (coef>0){
             let bigres:number= 0
-            bigres = -b - Math.sqrt(coef) / 2*a -b + Math.sqrt(coef) / 2*a
-    return array.push (bigres);
+            let bigres2:number = 0
+            bigres = -b - Math.sqrt(coef) / 2*a 
+            bigres2 = -b + Math.sqrt(coef) / 2*a
+     array.push (bigres, bigres2);
+     return array
   }
 };
 
